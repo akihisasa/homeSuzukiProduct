@@ -6,6 +6,10 @@ const config = {
             domain: 'aki908.github.io',
             basePath: '/homeSuzuki'
         },
+        production2: {
+            domain: 'akihisasa.github.io',
+            basePath: '/homeSuzukiProduct'
+        },
         staging: {
             domain: 'staging.example.com',
             basePath: '/staging'
