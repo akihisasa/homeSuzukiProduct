@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="暮らしを彩る雑貨店 - キッチン用品、日用品などを取り扱っています">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <title>Suzuki Zakka Store - 素敵な暮らしのパートナー</title>
+    
+    <!-- リソースの事前接続設定 -->
+    <link rel="dns-prefetch" href="//res.cloudinary.com">
+    <link rel="preconnect" href="//res.cloudinary.com" crossorigin>
+    
+    <!-- クリティカルCSS -->
+    <style>
+        /* 初期表示に必要な最小限のスタイル */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-content {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        #hero p {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    </style>
+
+    <!-- 非同期CSS読み込み -->
+    <link rel="preload" href="assets/styles.css" as="style">
+    <link rel="stylesheet" href="assets/styles.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="assets/styles.css">
+    </noscript>
+    <script src="assets/config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="site-logo">
+            <a href="index.html">Suzuki Zakka Store</a>
+        </div>
+        <!-- ハンバーガーメニューボタン -->
+        <button class="menu-toggle" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- PC用ナビゲーション -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#concept">コンセプト</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">商品一覧</a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-group">
+                            <span class="group-title">キッチン・インテリア</span>
+                            <ul>
+                                <li><a href="kitchen.html">キッチン用品</a></li>
+                                <li><a href="notImplemented.html">インテリア用品</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">食品・飲料</span>
+                            <ul>
+                                <li><a href="notImplemented.html">生鮮食品</a></li>
+                                <li><a href="foods.html">食品・調味料</a></li>
+                                <li><a href="bread-and-noodles.html">パン・麺類</a></li>
+                                <li><a href="notImplemented.html">デリカ・惣菜</a></li>
+                                <li><a href="sweets.html">スイーツ・お菓子</a></li>
+                                <li><a href="notImplemented.html">ドリンク</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">生活用品</span>
+                            <ul>
+                                <li><a href="daily-necessities.html">日用品</a></li>
+                                <li><a href="notImplemented.html">ベビー用品</a></li>
+                                <li><a href="notImplemented.html">衣料品</a></li>
+                                <li><a href="notImplemented.html">季節商品</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">ビューティー・ヘルスケア</span>
+                            <ul>
+                                <li><a href="notImplemented.html">ヘルスケア</a></li>
+                                <li><a href="notImplemented.html">コスメ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#access">アクセス</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <!-- モバイル用スライドメニュー -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#concept">コンセプト</a></li>
+                    <li class="mobile-dropdown">
+                        <a href="#" class="mobile-dropdown-toggle">商品一覧</a>
+                        <ul class="mobile-dropdown-menu">
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">キッチン・インテリア</span>
+                                <ul>
+                                    <li><a href="kitchen.html">キッチン用品</a></li>
+                                    <li><a href="notImplemented.html">インテリア用品</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">食品・飲料</span>
+                                <ul>
+                                    <li><a href="notImplemented.html">生鮮食品</a></li>
+                                    <li><a href="foods.html">食品・調味料</a></li>
+                                    <li><a href="bread-and-noodles.html">パン・麺類</a></li>
+                                    <li><a href="notImplemented.html">デリカ・惣菜</a></li>
+                                    <li><a href="sweets.html">スイーツ・お菓子</a></li>
+                                    <li><a href="notImplemented.html">ドリンク</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">生活用品</span>
+                                <ul>
+                                    <li><a href="daily-necessities.html">日用品</a></li>
+                                    <li><a href="notImplemented.html">ベビー用品</a></li>
+                                    <li><a href="notImplemented.html">衣料品</a></li>
+                                    <li><a href="notImplemented.html">季節商品</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">ビューティー・ヘルスケア</span>
+                                <ul>
+                                    <li><a href="notImplemented.html">ヘルスケア</a></li>
+                                    <li><a href="notImplemented.html">コスメ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- オーバーレイ背景 -->
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Suzuki Zakka Store</h1>
+                <p>あなたの日常に、ちょっとした幸せを</p>
+            </div>
+        </section>
+
+        <section id="concept">
+            <h2>コンセプト</h2>
+            <p>私たちは、日々の暮らしに寄り添う雑貨を厳選してお届けします。</p>
+            <p>シンプルで温かみのある商品を通じて、お客様の暮らしがより豊かになることを願っています。</p>
+        </section>
+
+        <section id="products">
+            <h2>取扱商品</h2>
+            <div class="category-sections">
+                <section class="category-group">
+                    <h3 class="category-group-title">キッチン・インテリア</h3>
+                    <div class="product-categories">
+                        <div class="category featured">
+                            <a href="kitchen.html" class="category-link">
+                                <div class="category-icon">🍳</div>
+                                <h4>キッチン用品</h4>
+                                <p>使い心地の良い調理器具や、温かみのある食器類を取り揃えています。</p>
+                            </a>
+                        </div>
+                        <div class="category featured">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">🏠</div>
+                                <h4>インテリア用品</h4>
+                                <p>お部屋を彩る小物から、実用的な収納グッズまで。</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category-group">
+                    <h3 class="category-group-title">食品・飲料</h3>
+                    <div class="product-categories">
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">🍖</div>
+                                <h4>生鮮食品</h4>
+                                <p>肉類・魚介類・野菜など、新鮮な食材を豊富に取り揃え。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="foods.html" class="category-link">
+                                <div class="category-icon">🥫</div>
+                                <h4>食品・調味料</h4>
+                                <p>厳選された食材と味を引き立てる調味料。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="bread-and-noodles.html" class="category-link">
+                                <div class="category-icon">🥖</div>
+                                <h4>パン・麺類</h4>
+                                <p>焼きたてパンと様々な種類の麺類。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">🍝</div>
+                                <h4>デリカ・惣菜</h4>
+                                <p>手軽に楽しめる惣菜やお弁当。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="sweets.html" class="category-link">
+                                <div class="category-icon">🍰</div>
+                                <h4>スイーツ・お菓子</h4>
+                                <p>甘い幸せのひとときを。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">🥤</div>
+                                <h4>ドリンク</h4>
+                                <p>様々な飲み物を取り揃え。</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category-group">
+                    <h3 class="category-group-title">生活用品</h3>
+                    <div class="product-categories">
+                        <div class="category">
+                            <a href="daily-necessities.html" class="category-link">
+                                <div class="category-icon">🧹</div>
+                                <h4>日用品</h4>
+                                <p>暮らしを快適に保つ生活必需品。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">👶</div>
+                                <h4>ベビー用品</h4>
+                                <p>赤ちゃんのための商品各種。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">👕</div>
+                                <h4>衣料品</h4>
+                                <p>快適な着心地の衣類。</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category-group">
+                    <h3 class="category-group-title">ビューティー・ヘルスケア</h3>
+                    <div class="product-categories">
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">💊</div>
+                                <h4>ヘルスケア</h4>
+                                <p>健康的な生活をサポート。</p>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="notImplemented.html" class="category-link">
+                                <div class="category-icon">💄</div>
+                                <h4>コスメ</h4>
+                                <p>美しさを引き立てる化粧品。</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="access">
+            <h2>アクセス</h2>
+            <div class="store-info">
+                <p>〒100-0001</p>
+                <p>東京都千代田区1-1-1</p>
+                <p>営業時間：11:00-19:00</p>
+                <p>定休日：水曜日</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <div class="contact-info">
+                <p>Suzuki Zakka Store</p>
+                <p>TEL: 03-1234-5678</p>
+                <p>お気軽にお問い合わせください。</p>
+            </div>
+            <div class="contact-form">
+                <a href="https://forms.gle/H2uYwZRHa9k4yGsb9" target="_blank" class="contact-button">お問い合わせフォームを開く</a>
+            </div>
+            <div class="line-button">
+                <a href="notImplemented.html" class="line-add-friend">
+                    <img src="https://res.cloudinary.com/dgldatt9k/image/upload/w_300,q_auto,f_auto/v1740271253/ja_tyt1gl.png" 
+                         alt="LINE公式アカウントを友だち追加" 
+                         loading="lazy">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Suzuki Zakka Store. All rights reserved.</p>
+    </footer>
+    <script src="assets/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お客様の日常を彩る、厳選された商品を取り揃えています。">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <title>商品一覧 - Suzuki Zakka Store</title>
+    
+    <!-- リソースの事前接続設定 -->
+    <link rel="dns-prefetch" href="//res.cloudinary.com">
+    <link rel="preconnect" href="//res.cloudinary.com" crossorigin>
+
+    <!-- メインスクリプトの事前読み込み -->
+    <link rel="preload" href="assets/menu.js" as="script">
+    <link rel="preload" href="assets/search.js" as="script">
+    <link rel="preload" href="assets/image-loader.js" as="script">
+    
+    <!-- クリティカルCSS -->
+    <style>
+        /* モーダル関連のスタイル */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .product-card img {
+            cursor: pointer;
+        }
+        /* 初期表示に必要な最小限のスタイル */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        .sub-hero {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .sub-hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub-hero p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+
+    <!-- 非同期CSS読み込み -->
+    <link rel="preload" href="assets/styles.css" as="style">
+    <link rel="preload" href="assets/product-page-styles.css" as="style">
+    <link rel="stylesheet" href="assets/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/product-page-styles.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/product-page-styles.css">
+    </noscript>
+    <script src="assets/config.js"></script>
+    <script src="assets/image-loader.js"></script>
+</head>
+<body>
+    <header>
+        <div class="site-logo">
+            <a href="index.html">Suzuki Zakka Store</a>
+        </div>
+        <!-- ハンバーガーメニューボタン -->
+        <button class="menu-toggle" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- PC用ナビゲーション -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">商品一覧</a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-group">
+                            <span class="group-title">キッチン・インテリア</span>
+                            <ul>
+                                <li><a href="kitchen.html">キッチン用品</a></li>
+                                <li><a href="notImplemented.html">インテリア用品</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">食品・飲料</span>
+                            <ul>
+                                <li><a href="notImplemented.html">生鮮食品</a></li>
+                                <li><a href="foods.html">食品・調味料</a></li>
+                                <li><a href="bread-and-noodles.html">パン・麺類</a></li>
+                                <li><a href="notImplemented.html">デリカ・惣菜</a></li>
+                                <li><a href="sweets.html">スイーツ・お菓子</a></li>
+                                <li><a href="notImplemented.html">ドリンク</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">生活用品</span>
+                            <ul>
+                                <li><a href="daily-necessities.html">日用品</a></li>
+                                <li><a href="notImplemented.html">ベビー用品</a></li>
+                                <li><a href="notImplemented.html">衣料品</a></li>
+                                <li><a href="notImplemented.html">季節商品</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-group">
+                            <span class="group-title">ビューティー・ヘルスケア</span>
+                            <ul>
+                                <li><a href="notImplemented.html">ヘルスケア</a></li>
+                                <li><a href="notImplemented.html">コスメ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="index.html#access">アクセス</a></li>
+                <li><a href="index.html#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <!-- モバイル用スライドメニュー -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li class="mobile-dropdown">
+                        <a href="#" class="mobile-dropdown-toggle">商品一覧</a>
+                        <ul class="mobile-dropdown-menu">
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">キッチン・インテリア</span>
+                                <ul>
+                                    <li><a href="kitchen.html">キッチン用品</a></li>
+                                    <li><a href="notImplemented.html">インテリア用品</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">食品・飲料</span>
+                                <ul>
+                                    <li><a href="notImplemented.html">生鮮食品</a></li>
+                                    <li><a href="foods.html">食品・調味料</a></li>
+                                    <li><a href="bread-and-noodles.html">パン・麺類</a></li>
+                                    <li><a href="notImplemented.html">デリカ・惣菜</a></li>
+                                    <li><a href="notImplemented.html">スイーツ・お菓子</a></li>
+                                    <li><a href="notImplemented.html">ドリンク</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">生活用品</span>
+                                <ul>
+                                    <li><a href="daily-necessities.html">日用品</a></li>
+                                    <li><a href="notImplemented.html">ベビー用品</a></li>
+                                    <li><a href="notImplemented.html">衣料品</a></li>
+                                    <li><a href="notImplemented.html">季節商品</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-group">
+                                <span class="mobile-group-title">ビューティー・ヘルスケア</span>
+                                <ul>
+                                    <li><a href="notImplemented.html">ヘルスケア</a></li>
+                                    <li><a href="notImplemented.html">コスメ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#access">アクセス</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- オーバーレイ背景 -->
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main>
+        <section class="sub-hero">
+            <h1>食品・調味料</h1>
+            <p>厳選された食材で、豊かな食卓を</p>
+            <p class="price-notice">価格についてはお問い合わせください</p>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="商品を検索..." class="search-input">
+            </div>
+
+            <!-- モーダル -->
+            <div id="imageModal" class="modal">
+                <div id="modalContent"></div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <script>
+                    (function() {
+                        const products = [
+                            {
+                                id: "p1",
+                                imageId: 'v1744422646/1000014969_rx5qrc.jpg',
+                                name: "特製カレー（辛口）",
+                                title: "特製カレー（辛口）",
+                                description: "食堂定番メニューの辛口カレー",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p2",
+                                imageId: 'v1744422646/1000014965_tyzd2u.jpg',
+                                name: "特製カレー（中辛）",
+                                title: "特製カレー（中辛）",
+                                description: "程よい辛さで食べやすい、定番人気のカレー",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p3",
+                                imageId: 'v1744422646/1000014966_relpfp.jpg',
+                                name: "特製カレー（甘口）",
+                                title: "特製カレー（甘口）",
+                                description: "お子様でも食べやすい、優しい味わいのカレー",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p5",
+                                imageId: 'v1744422646/1000014964_yvdff3.jpg',
+                                name: "玉露入り八女茶",
+                                title: "玉露入り八女茶",
+                                description: "上質な玉露が入った、香り高い福岡県産のお茶",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p6",
+                                imageId: 'v1745704840/1745699000729_no6wva.jpg',
+                                name: "畑のお肉のカレーそぼろ",
+                                title: "畑のお肉のカレーそぼろ",
+                                description: "大豆ミートで本物のお肉のような触感がクセになる",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p7",
+                                imageId: 'v1745704839/1745699001049_j8wyqa.jpg',
+                                name: "贅沢アワビ オイスターソース",
+                                title: "贅沢アワビ オイスターソース",
+                                description: "芳醇なアワビの自然なうまさが凝縮されたソース",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p8",
+                                imageId: 'v1745704840/1745699000456_ifglxl.jpg',
+                                name: "さばフレーク",
+                                title: "さばフレーク",
+                                description: "ふりかけ、おにぎりの具、お茶漬け、お手軽に使用できる一品",
+                                category: "調味料"
+                            },
+                            {
+                                id: "p9",
+                                imageId: 'v1745704840/1745699000848_avjhne.jpg',
+                                name: "コーンポタージュ",
+                                title: "コーンポタージュ",
+                                description: "とうもろこしの甘みが引き立つ濃厚スープ",
+                                category: "食品"
+                            }
+                        ];
+                        
+                        products.forEach(product => {
+                            document.write(`
+                                <div class="product-card" data-id="${product.id}" data-name="${product.name}" data-category="${product.category}">
+                                    <div class="product-image" onclick="openModal(this)" data-image-id="${product.imageId}" data-alt="${product.name}">
+                                        ${ImageLoader.createProductImage(product.imageId, product.name)}
+                                    </div>
+                                    <h3>${product.title}</h3>
+                                    <p>${product.description}</p>
+                                </div>
+                            `);
+                        });
+                    })();
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Suzuki Zakka Store. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/search.js"></script>
+    <script src="assets/menu.js"></script>
+    <script>
+        function openModal(element) {
+            const imageId = element.dataset.imageId;
+            const altText = element.dataset.alt;
+            const modal = document.getElementById('imageModal');
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = ImageLoader.generateLargeImage(imageId, altText);
+            modal.style.display = 'block';
+        }
+
+        // モーダルクリックで閉じる
+        document.getElementById('imageModal').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

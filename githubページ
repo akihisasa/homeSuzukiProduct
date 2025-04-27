@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Zakka Store - 素敵な暮らしのパートナー</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#concept">コンセプト</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">商品一覧</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="kitchen.html">キッチン用品</a></li>
+                        <li><a href="daily-necessities.html">日用品</a></li>
+                        <li><a href="stationery.html">ステーショナリー</a></li>
+                    </ul>
+                </li>
+                <li><a href="#access">アクセス</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Suzuki Zakka Store</h1>
+                <p>あなたの日常に、ちょっとした幸せを</p>
+            </div>
+        </section>
+
+        <section id="concept">
+            <h2>コンセプト</h2>
+            <p>私たちは、日々の暮らしに寄り添う雑貨を厳選してお届けします。</p>
+            <p>シンプルで温かみのある商品を通じて、お客様の暮らしがより豊かになることを願っています。</p>
+        </section>
+
+        <section id="products">
+            <h2>取扱商品</h2>
+            <div class="product-categories">
+                <div class="category">
+                    <a href="kitchen.html" class="category-link">
+                        <h3>キッチン用品</h3>
+                        <p>使い心地の良い調理器具や、温かみのある食器類を取り揃えています。</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="daily-necessities.html" class="category-link">
+                        <h3>日用品</h3>
+                        <p>お部屋を彩る小物から、実用的な収納グッズまで。</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <h3>ステーショナリー</h3>
+                    <p>毎日の暮らしを楽しく彩る文具や手帳類。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="access">
+            <h2>アクセス</h2>
+            <div class="store-info">
+                <p>〒100-0001</p>
+                <p>東京都千代田区1-1-1</p>
+                <p>営業時間：11:00-19:00</p>
+                <p>定休日：水曜日</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <div class="contact-info">
+                <p>Suzuki Zakka Store</p>
+                <p>TEL: 03-1234-5678</p>
+                <p>お気軽にお問い合わせください。</p>
+            </div>
+            <div class="contact-form">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIX2dYDyqsU9zFlnxhSPmPmN_J691WY5SXvhq0MtRQwfvEvQ/viewform" target="_blank" class="contact-button">お問い合わせフォームを開く</a>
+            </div>
+            <div class="line-button">
+                <a href="#" class="line-add-friend">
+                    <img src="https://res.cloudinary.com/dgldatt9k/image/upload/w_300,q_auto,f_auto/v1740271253/ja_tyt1gl.png" 
+                         alt="LINE公式アカウントを友だち追加" 
+                         loading="lazy">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Suzuki Zakka Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
