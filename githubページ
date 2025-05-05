@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suzuki Zakka Store - 素敵な暮らしのパートナー</title>
+    <title>FOOD FAMIRY - 素敵な暮らしのパートナー</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>Suzuki Zakka Store</h1>
+                <h1>FOOD FAMIRY</h1>
                 <p>あなたの日常に、ちょっとした幸せを</p>
             </div>
         </section>
@@ -75,7 +75,7 @@
         <section id="contact">
             <h2>お問い合わせ</h2>
             <div class="contact-info">
-                <p>Suzuki Zakka Store</p>
+                <p>FOOD FAMIRY</p>
                 <p>TEL: 03-1234-5678</p>
                 <p>お気軽にお問い合わせください。</p>
             </div>
@@ -93,7 +93,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Suzuki Zakka Store. All rights reserved.</p>
+        <p>&copy; 2025 FOOD FAMIRY. All rights reserved.</p>
     </footer>
 </body>
 </html>

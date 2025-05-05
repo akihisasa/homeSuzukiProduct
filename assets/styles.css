@@ -591,6 +591,7 @@ h3 {
 .line-button {
     text-align: center;
     margin: 0 auto 3rem;
+    display: none; /* 一時的に非表示 */
 }
 
 .line-add-friend {

@@ -1,22 +1,35 @@
 // サイト設定
 const config = {
     // 環境設定
+    // デバッグモードの設定
+    debugMode: false,
+
+    // 環境設定
     environments: {
         production: {
             domain: 'aki908.github.io',
-            basePath: '/homeSuzuki'
+            basePath: '/homeSuzuki',
+            isDebug: false
         },
         production2: {
             domain: 'akihisasa.github.io',
-            basePath: '/homeSuzukiProduct'
+            basePath: '/homeSuzukiProduct',
+            isDebug: false
+        },
+        customDomain: {
+            domain: 'www.foodfamily.jp',  // ここに取得したドメインを設定
+            basePath: '',  // ルートパスを使用
+            isDebug: false
         },
         staging: {
-            domain: 'staging.example.com',
-            basePath: '/staging'
+            domain: 'aki908.github.io',
+            basePath: '/homeSuzuki',
+            isDebug: false
         },
         development: {
             domain: 'localhost',
-            basePath: ''
+            basePath: '',
+            isDebug: true
         }
     },
 

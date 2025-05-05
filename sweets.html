@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="手作りの美味しさにこだわった、素材を活かしたお菓子を取り揃えています。">
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <title>スイーツ・お菓子 - Suzuki Zakka Store</title>
+    <title>スイーツ・お菓子 - FOOD FAMIRY</title>
     
     <!-- リソースの事前接続設定 -->
     <link rel="dns-prefetch" href="//res.cloudinary.com">
@@ -101,7 +101,7 @@
 
     <header>
         <div class="site-logo">
-            <a href="index.html">Suzuki Zakka Store</a>
+            <a href="index.html">FOOD FAMIRY</a>
         </div>
         <!-- ハンバーガーメニューボタン -->
         <button class="menu-toggle" aria-label="メニュー">
@@ -118,13 +118,6 @@
                     <a href="#" class="dropdown-toggle">商品一覧</a>
                     <ul class="dropdown-menu">
                         <li class="menu-group">
-                            <span class="group-title">キッチン・インテリア</span>
-                            <ul>
-                                <li><a href="kitchen.html">キッチン用品</a></li>
-                                <li><a href="notImplemented.html">インテリア用品</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-group">
                             <span class="group-title">食品・飲料</span>
                             <ul>
                                 <li><a href="notImplemented.html">生鮮食品</a></li>
@@ -138,6 +131,8 @@
                         <li class="menu-group">
                             <span class="group-title">生活用品</span>
                             <ul>
+                                <li><a href="kitchen.html">キッチン用品</a></li>
+                                <li><a href="notImplemented.html">インテリア用品</a></li>
                                 <li><a href="daily-necessities.html">日用品</a></li>
                                 <li><a href="notImplemented.html">ベビー用品</a></li>
                                 <li><a href="notImplemented.html">衣料品</a></li>
@@ -166,13 +161,6 @@
                         <a href="#" class="mobile-dropdown-toggle">商品一覧</a>
                         <ul class="mobile-dropdown-menu">
                             <li class="mobile-menu-group">
-                                <span class="mobile-group-title">キッチン・インテリア</span>
-                                <ul>
-                                    <li><a href="kitchen.html">キッチン用品</a></li>
-                                    <li><a href="notImplemented.html">インテリア用品</a></li>
-                                </ul>
-                            </li>
-                            <li class="mobile-menu-group">
                                 <span class="mobile-group-title">食品・飲料</span>
                                 <ul>
                                     <li><a href="notImplemented.html">生鮮食品</a></li>
@@ -186,6 +174,8 @@
                             <li class="mobile-menu-group">
                                 <span class="mobile-group-title">生活用品</span>
                                 <ul>
+                                    <li><a href="kitchen.html">キッチン用品</a></li>
+                                    <li><a href="notImplemented.html">インテリア用品</a></li>
                                     <li><a href="daily-necessities.html">日用品</a></li>
                                     <li><a href="notImplemented.html">ベビー用品</a></li>
                                     <li><a href="notImplemented.html">衣料品</a></li>
@@ -225,113 +215,100 @@
             <div class="products-grid" id="productsGrid">
                 <script>
                     (function() {
-                        const imageId = 'v1745704840/1745699000912_kfgg4t.jpg';
-                        const altText = '塩飴';
-                        document.write(`
-                            <div class="product-card" data-id="s1" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
+                        const products = [
+                            {
+                                id: "s1",
+                                imageId: 'v1745704840/1745699000912_kfgg4t.jpg',
+                                name: "塩飴",
+                                title: "伝統のしお飴",
+                                description: "熱中症対策に最適な、昔ながらの塩飴",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s2",
+                                imageId: 'v1745726301/1745725718473_d7pn3b.jpg',
+                                name: "ポップコーン",
+                                title: "マイク・ポップコーン",
+                                description: "上質なバターと醤油で仕上げたポップコーン",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s3",
+                                imageId: 'v1745726300/1745725718327_n0knr5.jpg',
+                                name: "どら焼き",
+                                title: "どら焼き",
+                                description: "豆乳入りどら焼き。ふんわり生地と甘味が絶妙",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s4",
+                                imageId: 'v1745726300/1745725718277_yqg7oq.jpg',
+                                name: "駄菓子",
+                                title: "ポンスケ",
+                                description: "カリッと香ばしいスナック菓子。甘辛醤油のり味",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s5",
+                                imageId: 'v1745726299/1745725718231_it8n65.jpg',
+                                name: "駄菓子",
+                                title: "ぼんち揚",
+                                description: "絶妙なカリカリ感。",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s6",
+                                imageId: 'v1745726298/1745725718108_kfvxwc.jpg',
+                                name: "駄菓子",
+                                title: "えびせん大判焼",
+                                description: "超定番スナック菓子。大きめで食べ応えあり",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s7",
+                                imageId: 'v1745726298/1745725717838_yylqo7.jpg',
+                                name: "駄菓子",
+                                title: "超辛いか姿フライ",
+                                description: "焙煎唐辛子入りのピリ辛が癖になる",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s8",
+                                imageId: 'v1745901655/1745893928215_ituyzi.jpg',
+                                name: "ミルクバームクーヘン",
+                                title: "ミルクバームクーヘン",
+                                description: "ふんわりバームクーヘン。ミルクの風味が広がる",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s9",
+                                imageId: 'v1745901654/1745893928287_jfyphu.jpg',
+                                name: "チョコバームクーヘン",
+                                title: "チョコバームクーヘン",
+                                description: "チョコレートの風味が楽しめるバームクーヘン",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s10",
+                                imageId: 'v1745901654/1745893928432_c4horm.jpg',
+                                name: "おいしいドーナッツ",
+                                title: "おいしいドーナッツ",
+                                description: "ふんわり生地のドーナッツ",
+                                category: "お菓子"
+                            }
+                        ];
+                        
+                        products.forEach(product => {
+                            document.write(`
+                                <div class="product-card" data-id="${product.id}" data-name="${product.name}" data-category="${product.category}">
+                                    <div class="product-image" onclick="openModal(this)" data-image-id="${product.imageId}" data-alt="${product.name}">
+                                        ${ImageLoader.createProductImage(product.imageId, product.name)}
+                                    </div>
+                                    <h3>${product.title}</h3>
+                                    <p>${product.description}</p>
                                 </div>
-                                <h3>伝統のしお飴</h3>
-                                <p>熱中症対策に最適な、昔ながらの塩飴</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726301/1745725718473_d7pn3b.jpg';
-                        const altText = 'ポップコーン';
-                        document.write(`
-                            <div class="product-card" data-id="s2" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>マイク・ポップコーン</h3>
-                                <p>上質なバターと醤油で仕上げたポップコーン</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726300/1745725718327_n0knr5.jpg';
-                        const altText = 'どら焼き';
-                        document.write(`
-                            <div class="product-card" data-id="s3" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>どら焼き</h3>
-                                <p>豆乳入りどら焼き。ふんわり生地と甘味が絶妙</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726300/1745725718277_yqg7oq.jpg';
-                        const altText = '駄菓子';
-                        document.write(`
-                            <div class="product-card" data-id="s4" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>ポンスケ</h3>
-                                <p>カリッと香ばしいスナック菓子。甘辛醤油のり味</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726299/1745725718231_it8n65.jpg';
-                        const altText = '駄菓子';
-                        document.write(`
-                            <div class="product-card" data-id="s5" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>ぼんち揚</h3>
-                                <p>絶妙なカリカリ感。</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726298/1745725718108_kfvxwc.jpg';
-                        const altText = '駄菓子';
-                        document.write(`
-                            <div class="product-card" data-id="s6" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>えびせん大判焼</h3>
-                                <p>超定番スナック菓子。大きめで食べ応えあり</p>
-                            </div>
-                        `);
-                    })();
-                </script>
-
-                <script>
-                    (function() {
-                        const imageId = 'v1745726298/1745725717838_yylqo7.jpg';
-                        const altText = '駄菓子';
-                        document.write(`
-                            <div class="product-card" data-id="s7" data-name="${altText}" data-category="お菓子">
-                                <div class="product-image" onclick="openModal(this)" data-image-id="${imageId}" data-alt="${altText}">
-                                    ${ImageLoader.createProductImage(imageId, altText)}
-                                </div>
-                                <h3>超辛いか姿フライ</h3>
-                                <p>焙煎唐辛子入りのピリ辛が癖になる</p>
-                            </div>
-                        `);
+                            `);
+                        });
                     })();
                 </script>
             </div>
@@ -339,7 +316,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Suzuki Zakka Store. All rights reserved.</p>
+        <p>&copy; 2025 FOOD FAMIRY. All rights reserved.</p>
     </footer>
 
     <script src="assets/search.js"></script>
