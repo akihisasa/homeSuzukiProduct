@@ -72,6 +72,10 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
         }
         .products-grid {
             display: grid;
@@ -125,7 +129,7 @@
                                 <li><a href="bread-and-noodles.html">パン・麺類</a></li>
                                 <li style="display: none;"><a href="notImplemented.html">デリカ・惣菜</a></li>
                                 <li><a href="sweets.html">スイーツ・お菓子</a></li>
-                                <li style="display: none;"><a href="notImplemented.html">ドリンク</a></li>
+                                <li><a href="drinks.html">ドリンク</a></li>
                             </ul>
                         </li>
                         <li class="menu-group">
@@ -167,7 +171,7 @@
                                     <li><a href="bread-and-noodles.html">パン・麺類</a></li>
                                     <li style="display: none;"><a href="notImplemented.html">デリカ・惣菜</a></li>
                                     <li><a href="sweets.html">スイーツ・お菓子</a></li>
-                                    <li style="display: none;"><a href="notImplemented.html">ドリンク</a></li>
+                                    <li><a href="drinks.html">ドリンク</a></li>
                                 </ul>
                             </li>
                             <li class="mobile-menu-group">
@@ -292,6 +296,22 @@
                                 name: "おいしいドーナッツ",
                                 title: "おいしいドーナッツ",
                                 description: "ふんわり生地のドーナッツ",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s11",
+                                imageId: 'v1746494253/1746455873781_ebufg9.jpg',
+                                name: "パティシエのカステラ",
+                                title: "パティシエのカステラ",
+                                description: "しっとりふわふわのカステラ",
+                                category: "お菓子"
+                            },
+                            {
+                                id: "s12",
+                                imageId: 'v1746494253/1746455873650_wkeb5s.jpg',
+                                name: "パウンドケーキ",
+                                title: "パウンドケーキ",
+                                description: "ふんわり、しっとり触感のパウンドケーキ",
                                 category: "お菓子"
                             }
                         ];

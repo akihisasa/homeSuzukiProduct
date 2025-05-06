@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="お客様の日常を彩る、厳選された商品を取り揃えています。">
+    <meta name="description" content="様々な種類のドリンクを取り揃えています">
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <title>商品一覧 - ニューアイテム</title>
+    <title>ドリンク - ニューアイテム</title>
     
     <!-- リソースの事前接続設定 -->
     <link rel="dns-prefetch" href="//res.cloudinary.com">
@@ -102,7 +102,6 @@
         <div class="site-logo">
             <a href="index.html">ニューアイテム</a>
         </div>
-        <!-- ハンバーガーメニューボタン -->
         <button class="menu-toggle" aria-label="メニュー">
             <span></span>
             <span></span>
@@ -112,7 +111,7 @@
         <!-- PC用ナビゲーション -->
         <nav class="desktop-nav">
             <ul>
-                <li><a href="index.html">ホーム</a></li>
+                <li><a href="index.html#concept">コンセプト</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">商品一覧</a>
                     <ul class="dropdown-menu">
@@ -130,7 +129,7 @@
                         <li class="menu-group">
                             <span class="group-title">生活用品</span>
                             <ul>
-                                <li style="display: none;"><a href="kitchen.html">キッチン用品</a></li>
+                                <li><a href="kitchen.html">キッチン用品</a></li>
                                 <li style="display: none;"><a href="notImplemented.html">インテリア用品</a></li>
                                 <li><a href="daily-necessities.html">日用品</a></li>
                                 <li style="display: none;"><a href="notImplemented.html">ベビー用品</a></li>
@@ -150,11 +149,12 @@
                 <li><a href="index.html#contact">お問い合わせ</a></li>
             </ul>
         </nav>
+
         <!-- モバイル用スライドメニュー -->
         <div class="mobile-menu">
             <nav class="mobile-nav">
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#concept">コンセプト</a></li>
                     <li class="mobile-dropdown">
                         <a href="#" class="mobile-dropdown-toggle">商品一覧</a>
                         <ul class="mobile-dropdown-menu">
@@ -165,14 +165,14 @@
                                     <li><a href="foods.html">食品・調味料</a></li>
                                     <li><a href="bread-and-noodles.html">パン・麺類</a></li>
                                     <li style="display: none;"><a href="notImplemented.html">デリカ・惣菜</a></li>
-                                    <li><a href="notImplemented.html">スイーツ・お菓子</a></li>
+                                    <li><a href="sweets.html">スイーツ・お菓子</a></li>
                                     <li><a href="drinks.html">ドリンク</a></li>
                                 </ul>
                             </li>
                             <li class="mobile-menu-group">
                                 <span class="mobile-group-title">生活用品</span>
                                 <ul>
-                                    <li style="display: none;"><a href="kitchen.html">キッチン用品</a></li>
+                                    <li><a href="kitchen.html">キッチン用品</a></li>
                                     <li style="display: none;"><a href="notImplemented.html">インテリア用品</a></li>
                                     <li><a href="daily-necessities.html">日用品</a></li>
                                     <li style="display: none;"><a href="notImplemented.html">ベビー用品</a></li>
@@ -193,18 +193,17 @@
                 </ul>
             </nav>
         </div>
-        <!-- オーバーレイ背景 -->
         <div class="menu-overlay"></div>
     </header>
 
     <main>
         <section class="sub-hero">
-            <h1>食品・調味料</h1>
-            <p>厳選された食材で、豊かな食卓を</p>
+            <h1>ドリンク</h1>
+            <p>お気に入りの一杯を見つけてください</p>
             <p class="price-notice">価格についてはお問い合わせください</p>
         </section>
 
-        <section id="products" class="products-section">
+        <section class="products-section">
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="商品を検索..." class="search-input">
             </div>
@@ -214,170 +213,73 @@
                 <div id="modalContent"></div>
             </div>
 
-            <div class="products-grid" id="productsGrid">
+            <div id="productsGrid" class="products-grid">
                 <script>
                     (function() {
                         const products = [
                             {
-                                id: "p1",
-                                imageId: 'v1744422646/1000014969_rx5qrc.jpg',
-                                name: "特製カレー（辛口）",
-                                title: "特製カレー（辛口）",
-                                description: "食堂定番メニューの辛口カレー",
-                                category: "調味料"
+                                id: "p5",
+                                imageId: 'v1744422646/1000014964_yvdff3.jpg',
+                                name: "玉露入り八女茶",
+                                title: "玉露入り八女茶",
+                                description: "上質な玉露が入った、香り高い福岡県産のお茶",
+                                category: "お茶"
                             },
                             {
-                                id: "p2",
-                                imageId: 'v1744422646/1000014965_tyzd2u.jpg',
-                                name: "特製カレー（中辛）",
-                                title: "特製カレー（中辛）",
-                                description: "程よい辛さで食べやすい、定番人気のカレー",
-                                category: "調味料"
+                                id: "drink2",
+                                imageId: 'v1746494100/1746455903682_kacx84.jpg',
+                                name: "おーい　お茶",
+                                title: "おーい　お茶",
+                                description: "2Lペットボトル箱入り",
+                                category: "お茶"
                             },
                             {
-                                id: "p3",
-                                imageId: 'v1744422646/1000014966_relpfp.jpg',
-                                name: "特製カレー（甘口）",
-                                title: "特製カレー（甘口）",
-                                description: "お子様でも食べやすい、優しい味わいのカレー",
-                                category: "調味料"
+                                id: "drink3",
+                                imageId: 'v1746494099/1746455873536_uyqfng.jpg',
+                                name: "トマトジュース",
+                                title: "トマトジュース",
+                                description: "無添加トマト100%使用",
+                                category: "トマトジュース"
                             },
                             {
-                                id: "p6",
-                                imageId: 'v1745704840/1745699000729_no6wva.jpg',
-                                name: "畑のお肉のカレーそぼろ",
-                                title: "畑のお肉のカレーそぼろ",
-                                description: "大豆ミートで本物のお肉のような触感がクセになる",
-                                category: "調味料"
+                                id: "drink4",
+                                imageId: 'v1746494100/1746455885315_pebh7w.jpg',
+                                name: "カフェオレ",
+                                title: "Blendy stick カフェオレ",
+                                description: "濃厚なコーヒーとクリーミーなミルクのハーモニー",
+                                category: "カフェオレ"
                             },
                             {
-                                id: "p7",
-                                imageId: 'v1745704839/1745699001049_j8wyqa.jpg',
-                                name: "贅沢アワビ オイスターソース",
-                                title: "贅沢アワビ オイスターソース",
-                                description: "芳醇なアワビの自然なうまさが凝縮されたソース",
-                                category: "調味料"
+                                id: "drink5",
+                                imageId: 'v1746494100/1746455903743_f9edml.jpg',
+                                name: "ライフガード",
+                                title: "ライフガード",
+                                description: "エナジードリンク箱入り",
+                                category: "エナジードリンク"
                             },
                             {
-                                id: "p8",
-                                imageId: 'v1745704840/1745699000456_ifglxl.jpg',
-                                name: "さばフレーク",
-                                title: "さばフレーク",
-                                description: "ふりかけ、おにぎりの具、お茶漬け、お手軽に使用できる一品",
-                                category: "調味料"
+                                id: "drink6",
+                                imageId: 'v1746494099/1746455899654_qq57h6.jpg',
+                                name: "MAXIM粉末コーヒー",
+                                title: "MAXIM粉末コーヒー",
+                                description: "濃厚なコーヒーの香りと味わい",
+                                category: "コーヒー"
                             },
                             {
-                                id: "p9",
-                                imageId: 'v1745704840/1745699000848_avjhne.jpg',
-                                name: "コーンポタージュ",
-                                title: "コーンポタージュ",
-                                description: "とうもろこしの甘みが引き立つ濃厚スープ",
-                                category: "食品"
+                                id: "drink7",
+                                imageId: 'v1746494099/1746455896805_cpkwcw.jpg',
+                                name: "おーい　お茶（茶葉）",
+                                title: "おーい　お茶（茶葉）",
+                                description: "玄米茶（茶葉）",
+                                category: "お茶"
                             },
                             {
-                                id: "p10",
-                                imageId: 'v1745901655/1745893928135_wpgfrf.jpg',
-                                name: "白花豆",
-                                title: "白花豆",
-                                description: "ふっくらおいしい煮豆",
-                                category: "食品"
-                            },
-                            {
-                                id: "p11",
-                                imageId: 'v1745901655/1745893927901_quv5fo.jpg',
-                                name: "三杯酢仕立て ところてん",
-                                title: "三杯酢仕立て ところてん",
-                                description: "本格天然ところてん。おとくな2連パック",
-                                category: "食品"
-                            },
-                            {
-                                id: "p12",
-                                imageId: 'v1745901655/1745893928061_k8chlw.jpg',
-                                name: "黒酢仕立て ところてん",
-                                title: "黒酢仕立て ところてん",
-                                description: "格天然ところてん。おとくな2連パック",
-                                category: "食品"
-                            },
-                            {
-                                id: "p13",
-                                imageId: 'v1745901655/1745893928582_prwuvy.jpg',
-                                name: "甘辛しょうゆ味 鶏そぼろ",
-                                title: "甘辛しょうゆ味 鶏そぼろ",
-                                description: "あらびき鶏肉の鶏そぼろ。お弁当やおにぎりに最適",
-                                category: "調味料"
-                            },
-                            {
-                                id: "p14",
-                                imageId: 'v1745901654/1745893928512_e0ukz5.jpg',
-                                name: "ピエトロ ガーリックオイル",
-                                title: "ピエトロ ガーリックオイル",
-                                description: "ニンニクの風味が引き立つオイル",
-                                category: "調味料"
-                            },
-                            {
-                                id: "p15",
-                                imageId: 'v1745901654/1745893927691_fmm4c0.jpg',
-                                name: "お肉がゴロっと ポークカレー（中辛）",
-                                title: "お肉がゴロっと ポークカレー（中辛）",
-                                description: "お手軽レトルトカレー。お肉がゴロっと入った本格派",
-                                category: "調味料"
-                            }
-                            ,
-                            {
-                                id: "p16",
-                                imageId: 'v1745901654/1745893928366_pjahiw.jpg',
-                                name: "叙々苑野菜サラダのたれ ゴマ風味",
-                                title: "叙々苑野菜サラダのたれ ゴマ風味",
-                                description: "あの叙々苑のサラダのたれが家庭でも楽しめる",
-                                category: "調味料"
-                            },
-                            {
-                                id: "p17",
-                                imageId: 'v1746494257/1746455868204_jsmpw5.jpg',
-                                name: "ビーフシチュー",
-                                title: "ビーフシチュー",
-                                description: "牛肉と野菜の旨味が溶け込んだ濃厚なシチュー",
-                                category: "食品"
-                            },
-                            {
-                                id: "p18",
-                                imageId: 'v1746494253/1746455873425_jcxj5z.jpg',
-                                name: "いちごジャム",
-                                title: "いちごジャム",
-                                description: "甘酸っぱいいちごの風味が楽しめるジャム",
-                                category: "食品"
-                            },
-                            {
-                                id: "p19",
-                                imageId: 'v1746494253/1746455868074_vqwxfc.jpg',
-                                name: "のり佃煮",
-                                title: "のり佃煮",
-                                description: "海苔の風味豊かな佃煮",
-                                category: "食品"
-                            },
-                            {
-                                id: "p20",
-                                imageId: 'v1746494253/1746455888853_txvoeu.jpg',
-                                name: "キウイフルーツソース",
-                                title: "キウイフルーツソース",
-                                description: "甘酸っぱいキウイの風味が楽しめるソース",
-                                category: "食品"
-                            },
-                            {
-                                id: "p21",
-                                imageId: 'v1746494252/1746455894281_khh5sa.jpg',
-                                name: "辛子明太子　ふりかけ",
-                                title: "辛子明太子　ふりかけ",
-                                description: "辛子明太子の風味が楽しめるふりかけ",
-                                category: "調味料"
-                            },
-                            {
-                                id: "p22",
-                                imageId: 'v1746494252/1746455891797_mtdvoj.jpg',
-                                name: "かつお　ふりかけ",
-                                title: "かつお　ふりかけ",
-                                description: "かつおの風味が楽しめるふりかけ",
-                                category: "調味料"
+                                id: "drink8",
+                                imageId: 'v1746494447/1746455903780_xwcx36.jpg',
+                                name: "オロナミンCドリンク",
+                                title: "オロナミンCドリンク",
+                                description: "ビタミンCとアミノ酸を配合したエナジードリンク",
+                                category: "エナジードリンク"
                             }
                         ];
                         
@@ -402,8 +304,8 @@
         <p>&copy; 2025 ニューアイテム. All rights reserved.</p>
     </footer>
 
-    <script src="assets/search.js"></script>
     <script src="assets/menu.js"></script>
+    <script src="assets/search.js"></script>
     <script>
         function openModal(element) {
             const imageId = element.dataset.imageId;
