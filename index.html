@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="暮らしを彩る雑貨店 - キッチン用品、日用品などを取り扱っています">
+    <meta name="description" content="UUMAZING 食料品・生活用品 - あなたの日常に、ちょっとした幸せを。食品・調味料、パン・麺類、ドリンク、日用品など幅広く取り揃えています。">
+    <meta name="keywords" content="UUMAZING,食料品,食品,調味料,パン,麺類,ドリンク,日用品,スイーツ,お菓子,生活用品,雑貨">
+    <meta name="author" content="UUMAZING">
+    <meta property="og:title" content="UUMAZING - 食料品・生活用品">
+    <meta property="og:description" content="UUMAZING 食料品・生活用品 - あなたの日常に、ちょっとした幸せを。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.foodfamily.jp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="UUMAZING - 食料品・生活用品">
+    <meta name="twitter:description" content="UUMAZING 食料品・生活用品 - あなたの日常に、ちょっとした幸せを。">
+    
+    <!-- ファビコン設定 -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.webp">
+    <link rel="apple-touch-icon" href="assets/images/logo.webp">
+    <meta name="msapplication-TileImage" content="assets/images/logo.webp">
+    
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <title>ニューアイテム - 素敵な暮らしのパートナー</title>
+    <title>UUMAZING - 食料品・生活用品 | あなたの日常に、ちょっとした幸せを</title>
+    
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "UUMAZING",
+        "description": "UUMAZING 食料品・生活用品 - あなたの日常に、ちょっとした幸せを。食品・調味料、パン・麺類、ドリンク、日用品など幅広く取り揃えています。",
+        "url": "https://www.foodfamily.jp",
+        "telephone": "080-3228-1158",
+        "currenciesAccepted": "JPY",
+        "paymentAccepted": "現金",
+        "priceRange": "¥",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "商品カタログ",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "食品・調味料",
+                        "category": "食料品"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "パン・麺類",
+                        "category": "食料品"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "ドリンク",
+                        "category": "飲料"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "スイーツ・お菓子",
+                        "category": "食料品"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "日用品",
+                        "category": "生活用品"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     
     <!-- リソースの事前接続設定 -->
     <link rel="dns-prefetch" href="//res.cloudinary.com">
@@ -51,7 +129,7 @@
 <body>
     <header>
         <div class="site-logo">
-            <a href="index.html">ニューアイテム</a>
+            <a href="index.html">UUMAZING</a>
         </div>
         <!-- ハンバーガーメニューボタン -->
         <button class="menu-toggle" aria-label="メニュー">
@@ -151,14 +229,14 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>ニューアイテム</h1>
+                <h1>UUMAZING</h1>
                 <p>あなたの日常に、ちょっとした幸せを</p>
             </div>
         </section>
 
         <section id="concept">
             <h2>コンセプト</h2>
-            <p>私たちは、日々の暮らしに寄り添う雑貨を厳選してお届けします。</p>
+            <p>私たちは、日々の暮らしに寄り添う食料品を厳選してお届けします。</p>
             <p>シンプルで温かみのある商品を通じて、お客様の暮らしがより豊かになることを願っています。</p>
         </section>
 
@@ -170,23 +248,29 @@
                     <div class="product-categories">
                         <div class="category">
                             <a href="drinks.html" class="category-link">
-                                <div class="category-icon">🥤</div>
-                                <h4>ドリンク</h4>
-                                <p>様々な飲み物を取り揃え。</p>
+                                <div class="category-icon"><img src="assets/images/drink.ico" alt="ドリンク" width="180" height="180"></div>
+                                <div class="category-info">
+                                    <h4>ドリンク</h4>
+                                    <p>様々な飲み物を取り揃え。</p>
+                                </div>
                             </a>
                         </div>
                         <div class="category">
                             <a href="foods.html" class="category-link">
-                                <div class="category-icon">🥫</div>
-                                <h4>食品・調味料</h4>
-                                <p>厳選された食材と味を引き立てる調味料。</p>
+                                <div class="category-icon"><img src="assets/images/foods.ico" alt="食品・調味料" width="180" height="180"></div>
+                                <div class="category-info">
+                                    <h4>食品・調味料</h4>
+                                    <p>厳選された食材と味を引き立てる調味料。</p>
+                                </div>
                             </a>
                         </div>
                         <div class="category">
                             <a href="bread-and-noodles.html" class="category-link">
-                                <div class="category-icon">🥖</div>
-                                <h4>パン・麺類</h4>
-                                <p>焼きたてパンと様々な種類の麺類。</p>
+                                <div class="category-icon"><img src="assets/images/bread-and-noodles.ico" alt="パン・麺類" width="180" height="180"></div>
+                                <div class="category-info">
+                                    <h4>パン・麺類</h4>
+                                    <p>焼きたてパンと様々な種類の麺類。</p>
+                                </div>
                             </a>
                         </div>
                         <div class="category" style="display: none;">
@@ -198,9 +282,11 @@
                         </div>
                         <div class="category">
                             <a href="sweets.html" class="category-link">
-                                <div class="category-icon">🍰</div>
-                                <h4>スイーツ・お菓子</h4>
-                                <p>甘い幸せのひとときを。</p>
+                                <div class="category-icon"><img src="assets/images/sweets.ico" alt="スイーツ・お菓子" width="180" height="180"></div>
+                                <div class="category-info">
+                                    <h4>スイーツ・お菓子</h4>
+                                    <p>甘い幸せのひとときを。</p>
+                                </div>
                             </a>
                         </div>
                         <div class="category" style="display: none;">
@@ -232,9 +318,11 @@
                         </div>
                         <div class="category">
                             <a href="daily-necessities.html" class="category-link">
-                                <div class="category-icon">🧹</div>
-                                <h4>日用品</h4>
-                                <p>暮らしを快適に保つ生活必需品。</p>
+                                <div class="category-icon"><img src="assets/images/daily-necessities.ico" alt="日用品" width="180" height="180"></div>
+                                <div class="category-info">
+                                    <h4>日用品</h4>
+                                    <p>暮らしを快適に保つ生活必需品。</p>
+                                </div>
                             </a>
                         </div>
                         <div class="category" style="display: none;">
@@ -279,7 +367,7 @@
         <section id="contact">
             <h2>お問い合わせ</h2>
             <div class="contact-info">
-                <p>ニューアイテム</p>
+                <p>UUMAZING</p>
                 <p>TEL: 080-3228-1158</p>
                 <p>お気軽にお問い合わせください。</p>
             </div>
@@ -297,7 +385,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 ニューアイテム. All rights reserved.</p>
+        <p>&copy; 2025 UUMAZING. All rights reserved.</p>
     </footer>
     <script src="assets/menu.js"></script>
 </body>
