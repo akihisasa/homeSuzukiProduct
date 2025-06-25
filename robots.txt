@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.foodfamily.jp/sitemap.xml
+
+# Disallow crawling of certain directories
+Disallow: /assets/
+Disallow: /githubページ/
