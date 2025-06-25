@@ -1,6 +1,6 @@
-# UUMAZINGホームページ
+# UUMAIZINGホームページ
 
-UUMAZING 食料品・生活用品の紹介サイトです。GitHub Pagesでホストされる静的ウェブサイトです。
+UUMAIZING 食料品・生活用品の紹介サイトです。GitHub Pagesでホストされる静的ウェブサイトです。
 
 ## ディレクトリ構造
 
