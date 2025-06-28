@@ -7,8 +7,8 @@ const config = {
     // 環境設定
     environments: {
         production: {
-            domain: 'aki908.github.io',
-            basePath: '/homeSuzuki',
+            domain: 'www.uumaizing.com',  // ここに取得したドメインを設定
+            basePath: '',  // ルートパスを使用
             isDebug: false
         },
         production2: {
@@ -17,14 +17,14 @@ const config = {
             isDebug: false
         },
         customDomain: {
-            domain: 'www.foodfamily.jp',  // ここに取得したドメインを設定
+            domain: 'www.uumaizing.com',  // ここに取得したドメインを設定
             basePath: '',  // ルートパスを使用
             isDebug: false
         },
         staging: {
             domain: 'aki908.github.io',
             basePath: '/homeSuzuki',
-            isDebug: false
+            isDebug: true
         },
         development: {
             domain: 'localhost',
@@ -35,13 +35,48 @@ const config = {
 
     // 現在の環境を判定
     getCurrentEnv() {
-        const hostname = window.location.hostname;
-        for (const [env, settings] of Object.entries(this.environments)) {
-            if (hostname.includes(settings.domain)) {
-                return env;
-            }
+        // URLパラメータでの環境指定をチェック
+        const urlParams = new URLSearchParams(window.location.search);
+        const envParam = urlParams.get('env');
+        if (envParam && this.environments[envParam]) {
+            return envParam;
         }
+        
+        // ローカルストレージでの環境指定をチェック
+        const storedEnv = localStorage.getItem('uumaizing_env');
+        if (storedEnv && this.environments[storedEnv]) {
+            return storedEnv;
+        }
+        
+        // ホスト名ベースでの判定
+        const hostname = window.location.hostname;
+        
+        // 各環境を明確に判定
+        if (hostname.includes('www.uumaizing.com')) {
+            return 'production';
+        }
+        if (hostname.includes('akihisasa.github.io')) {
+            return 'production2';
+        }
+        if (hostname.includes('aki908.github.io')) {
+            return 'staging';
+        }
+        if (hostname.includes('localhost')) {
+            return 'development';
+        }
+        
         return 'development'; // デフォルト
+    },
+
+    // 環境を手動設定する関数（デバッグ用）
+    setEnvironment(env) {
+        if (this.environments[env]) {
+            localStorage.setItem('uumaizing_env', env);
+            console.log(`Environment set to: ${env}`);
+            location.reload();
+        } else {
+            console.error(`Invalid environment: ${env}`);
+        }
     },
 
     // 環境に応じたベースパスを取得
@@ -65,9 +100,17 @@ const config = {
 
     // デバッグ情報
     debug() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const storedEnv = localStorage.getItem('uumaizing_env');
+        
+        console.log('=== Environment Debug Info ===');
         console.log('Current Environment:', this.getCurrentEnv());
         console.log('Base Path:', this.getBasePath());
         console.log('Hostname:', window.location.hostname);
+        console.log('URL Param "env":', urlParams.get('env'));
+        console.log('Stored Environment:', storedEnv);
+        console.log('Current URL:', window.location.href);
+        console.log('==============================');
     }
 };
 
@@ -102,5 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
         config.debug();
         console.log('Assets path example:', config.getAssetPath('assets/example.js'));
         console.log('Worker path example:', config.getWorkerPath('assets/search-worker.js'));
+        console.log('\n環境切り替え方法:');
+        console.log('window.siteConfig.setEnvironment("staging") - staging環境に切り替え');
+        console.log('window.siteConfig.setEnvironment("production") - production環境に切り替え');
+        console.log('window.siteConfig.setEnvironment("development") - development環境に切り替え');
     }
 });

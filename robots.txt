@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.foodfamily.jp/sitemap.xml
+Sitemap: https://www.uumaizing.com/sitemap.xml
 
 # Disallow crawling of certain directories
 Disallow: /assets/
