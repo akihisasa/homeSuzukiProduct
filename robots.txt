@@ -1,10 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /index.html
 
 # Sitemap location
 Sitemap: https://uumaizing.com/sitemap.xml
 
-# Disallow crawling of certain directories
+# Disallow crawling of certain directories and files
 Disallow: /assets/
 Disallow: /githubページ/
 Disallow: /drinks.html
@@ -12,3 +13,5 @@ Disallow: /sweets.html
 Disallow: /bread-and-noodles.html
 Disallow: /foods.html
 Disallow: /daily-necessities.html
+Disallow: /kitchen.html
+Disallow: /notImplemented.html

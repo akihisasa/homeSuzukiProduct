@@ -2,44 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://uumaizing.com/</loc>
-    <lastmod>2025-06-28</lastmod>
+    <lastmod>2025-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/index.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/foods.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/drinks.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/bread-and-noodles.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/sweets.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://uumaizing.com/daily-necessities.html</loc>
-    <lastmod>2025-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
