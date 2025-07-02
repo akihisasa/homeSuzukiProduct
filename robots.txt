@@ -7,3 +7,8 @@ Sitemap: https://uumaizing.com/sitemap.xml
 # Disallow crawling of certain directories
 Disallow: /assets/
 Disallow: /githubページ/
+Disallow: /drinks.html
+Disallow: /sweets.html
+Disallow: /bread-and-noodles.html
+Disallow: /foods.html
+Disallow: /daily-necessities.html
